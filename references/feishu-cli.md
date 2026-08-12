@@ -6,6 +6,15 @@
 lark-cli auth status --json --verify
 ```
 
+支持 `auth status --json --verify` 的环境必须确认 `identity=user`、`verified=true`。当前 CLI 构建若没有 `auth` 子命令，可退回：
+
+```bash
+lark-cli contact +get-user --as user --json
+lark-cli task +get-my-tasks --as user --json
+```
+
+兼容探测只用于只读读取脱敏表格，不能扩展成跨租户写入或身份绑定。
+
 只读取用户指定的脱敏带宽表或市场数据表：
 
 ```bash
