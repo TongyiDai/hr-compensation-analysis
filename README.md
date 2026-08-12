@@ -65,7 +65,7 @@ lark-cli sheets +cells-get --url "https://example.feishu.cn/sheets/shtXXXX" \
   --sheet-name "脱敏薪酬带宽" --range "A1:Z200" --include value,formula --as user --json
 ```
 
-飞书只用于读取用户明确授权的脱敏表格。没有飞书接口时，直接使用本地或用户提供材料即可。
+支持 `auth status --json --verify` 的环境必须确认 `identity=user`、`verified=true`。当前 CLI 构建若没有 `auth` 子命令，可退回 `contact +get-user --as user` 或 `task +get-my-tasks --as user` 做只读兼容探测。飞书只用于读取用户明确授权的脱敏表格。没有飞书接口时，直接使用本地或用户提供材料即可。
 
 ## 如何看结果
 

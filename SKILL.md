@@ -64,7 +64,7 @@ lark-cli sheets +cells-get --url "https://example.feishu.cn/sheets/shtXXXX" \
   --sheet-name "脱敏薪酬带宽" --range "A1:Z200" --include value,formula --as user --json
 ```
 
-读取顺序和字段边界见 `references/feishu-cli.md`。不默认写回表格、不发送薪酬消息、不修改 HRIS 或审批记录；任何外部写入都需要用户单独确认并在写后读回验证。
+支持 `auth status --json --verify` 的环境必须确认 `identity=user`、`verified=true`。当前 CLI 构建若没有 `auth` 子命令，可退回 `contact +get-user --as user` 或 `task +get-my-tasks --as user` 做只读兼容探测。读取顺序和字段边界见 `references/feishu-cli.md`。不默认写回表格、不发送薪酬消息、不修改 HRIS 或审批记录；任何外部写入都需要用户单独确认并在写后读回验证。
 
 ## 输出要求
 
