@@ -1,0 +1,4 @@
+interface:
+  display_name: "薪酬结构分析"
+  short_description: "从脱敏薪酬材料生成可复核的结构分析包与人工复核清单。"
+  default_prompt: "请使用 $hr-compensation-analysis 基于脱敏薪酬表和带宽生成结构分析包。"
