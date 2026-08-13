@@ -93,7 +93,8 @@ lark-cli sheets +cells-get --url "https://example.feishu.cn/sheets/shtXXXX" \
 
 ```bash
 python3 -m unittest discover -s tests -p 'test_*.py'
-python3 /path/to/skill-creator/scripts/quick_validate.py .
+# 可选：若本机已安装 skill-creator 工具，可额外校验 SKILL.md frontmatter
+# python3 "$SKILL_CREATOR/scripts/quick_validate.py" .
 ```
 
 ## 上游与许可证
